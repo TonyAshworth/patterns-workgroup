@@ -1,14 +1,23 @@
-module.exports = function (wallaby) {
+module.exports = function(wallaby) {
     return {
+        env: {
+            type: 'node',
+            runner: 'node',
+        },
         files: [
-            {pattern: 'scripts/**/*.js'},
+            'scripts/**/*.js',
+            '!scripts/**/*.spec.js',
         ],
         tests: [
-            {pattern: 'scripts/**/*.spec.js'}
+            'scripts/**/*.spec.js',
         ],
         compilers: {
-            'scripts/**/*.js': wallaby.compilers.babel()
+            '**/*.js': wallaby.compilers.babel(),
         },
         debug: true,
+        testFramework: 'mocha',
+        setup: function() {
+            global.expect = require('chai').expect;
+        },
     };
 };
