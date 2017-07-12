@@ -1,7 +1,5 @@
 'use strict';
 
-const babel = require ('babel');
-
 module.exports = function (wallaby) {
     return {
         files: [
@@ -11,9 +9,7 @@ module.exports = function (wallaby) {
             {pattern: 'scripts/**/*.spec.js'}
         ],
         compilers: {
-            'scripts/**/*.js': wallaby.compilers.babel({
-                babel: babel,
-            }),
+            'scripts/**/*.js': wallaby.compilers.babel()
         },
         debug: true
     };
