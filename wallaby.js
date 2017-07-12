@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function (wallaby) {
     return {
         files: [
@@ -11,6 +9,6 @@ module.exports = function (wallaby) {
         compilers: {
             'scripts/**/*.js': wallaby.compilers.babel()
         },
-        debug: true
+        debug: true,
     };
 };
