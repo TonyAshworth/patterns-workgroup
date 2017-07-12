@@ -1,12 +1,12 @@
-class TermROC {
+export class TermROC {
 
 }
 
-class RevolvingTermROC {
+export class RevolvingTermROC {
 
 }
 
-class Loan {
+export class Loan {
     firstConstructor(notational, outstanding, rating, expiry){
         this.strategy = new TermROC();
         this.notational = notational;

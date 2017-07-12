@@ -1,5 +1,7 @@
 'use strict';
 
+import {Loan, TermROC, RevolvingTermROC} from './chain_constructors.orig'
+
 describe('chaining constructors', function() {
 
     beforeEach(function () {
