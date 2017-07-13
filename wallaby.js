@@ -12,7 +12,7 @@ module.exports = function(wallaby) {
             'scripts/**/*.spec.js',
         ],
         compilers: {
-            '**/*.js': wallaby.compilers.babel(),
+            'scripts/**/*.js': wallaby.compilers.babel(),
         },
         debug: true,
         testFramework: 'mocha',
