@@ -13,7 +13,7 @@ describe('chaining constructors', function() {
         const outstanding = 0.2;
         const rating = 1;
         const expiry = new Date('3/7/1981');
-        this.loan.firstConstructor(notational, outstanding, rating, expiry);
+        this.loan.createTermROCLoan(notational, outstanding, rating, expiry);
         expect(this.loan.notational).to.equal(0.1);
         expect(this.loan.outstanding).to.equal(0.2);
         expect(this.loan.rating).to.equal(1);
@@ -27,7 +27,7 @@ describe('chaining constructors', function() {
         const rating = 1;
         const expiry = new Date('3/7/1981');
         const maturity = new Date('3/7/2000');
-        this.loan.secondConstructor(notational, outstanding, rating, expiry, maturity);
+        this.loan.createRevolvingTermROCLoan(notational, outstanding, rating, expiry, maturity);
         expect(this.loan.notational).to.equal(0.1);
         expect(this.loan.outstanding).to.equal(0.2);
         expect(this.loan.rating).to.equal(1);
@@ -43,7 +43,7 @@ describe('chaining constructors', function() {
         const rating = 1;
         const expiry = new Date('3/7/1981');
         const maturity = new Date('3/7/2000');
-        this.loan.thirdConstructor(strategy, notational, outstanding, rating, expiry, maturity);
+        this.loan.createTermLoan(strategy, notational, outstanding, rating, expiry, maturity);
         expect(this.loan.notational).to.equal(0.1);
         expect(this.loan.outstanding).to.equal(0.2);
         expect(this.loan.rating).to.equal(1);

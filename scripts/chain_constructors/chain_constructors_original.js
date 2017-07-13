@@ -1,13 +1,9 @@
-export class TermROC {
+export class TermROC { }
 
-}
-
-export class RevolvingTermROC {
-
-}
+export class RevolvingTermROC { }
 
 export class Loan {
-    firstConstructor(notational, outstanding, rating, expiry){
+    createTermROCLoan(notational, outstanding, rating, expiry){
         this.strategy = new TermROC();
         this.notational = notational;
         this.outstanding = outstanding;
@@ -15,7 +11,7 @@ export class Loan {
         this.expiry = expiry;
     }
 
-    secondConstructor(notational, outstanding, rating, expiry, maturity){
+    createRevolvingTermROCLoan(notational, outstanding, rating, expiry, maturity){
         this.strategy = new RevolvingTermROC();
         this.notational = notational;
         this.outstanding = outstanding;
@@ -24,7 +20,7 @@ export class Loan {
         this.maturity = maturity;
     }
 
-    thirdConstructor(strategy, notational, outstanding, rating, expiry, maturity){
+    createTermLoan(strategy, notational, outstanding, rating, expiry, maturity){
         this.strategy = strategy;
         this.notational = notational;
         this.outstanding = outstanding;
