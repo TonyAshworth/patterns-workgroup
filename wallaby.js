@@ -18,6 +18,7 @@ module.exports = function(wallaby) {
         testFramework: 'mocha',
         setup: function() {
             global.expect = require('chai').expect;
+            global.assert = require('chai').assert;
         },
     };
 };
