@@ -1,14 +1,12 @@
-'use strict';
-
 import {Loan, TermROC, RevolvingTermROC} from './chain_constructors_original'
 
-describe('chaining constructors', function() {
+describe('chaining creation methods', function() {
 
     beforeEach(function () {
         this.loan = new Loan();
     });
 
-    it('the first constructor should set all the properties', function () {
+    it('the createTermROCLoan function should set the properties that are passed in properly.', function () {
         const notational = 0.1;
         const outstanding = 0.2;
         const rating = 1;
@@ -21,7 +19,7 @@ describe('chaining constructors', function() {
         expect(this.loan.strategy instanceof TermROC).to.equal(true);
     });
 
-    it('the first constructor should set all the properties', function () {
+    it('the createRevolvingTermROCLoan function should set the properties that are passed in properly.', function () {
         const notational = 0.1;
         const outstanding = 0.2;
         const rating = 1;
@@ -36,7 +34,7 @@ describe('chaining constructors', function() {
         expect(this.loan.strategy instanceof RevolvingTermROC).to.equal(true);
     });
 
-    it('the first constructor should set all the properties', function () {
+    it('the createTermLoan function should set the properties that are passed in properly.', function () {
         const strategy = new TermROC();
         const notational = 0.1;
         const outstanding = 0.2;
